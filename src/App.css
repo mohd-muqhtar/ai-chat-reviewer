@@ -1,0 +1,78 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left, main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+/* Fix editor height and ensure visibility */
+.code {
+  height: 100%;
+  width: 100%;
+  background-color: black; /* Ensures contrast */
+  color: white; /* Ensures text is visible */
+  font-family: "Fira Code", "Fira Mono", monospace;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: auto; /* Ensures scrolling */
+}
+
+/* Ensure the code editor textarea has a visible cursor */
+.code textarea {
+  caret-color: white !important; /* Makes the text cursor visible */
+  color: white !important; /* Ensures text is readable */
+  background: transparent !important; /* Prevents white background */
+  outline: none; /* Removes default outline */
+  border: none;
+  font-size: 12px;
+}
+
+/* Fix the review button */
+main .left {
+  background-color: black;
+  position: relative;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(184, 184, 245);
+  color: black;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+main .right {
+  background-color: rgb(75, 75, 75);
+  color: white;
+  
+  padding:1rem 2rem;
+  font-size:small;
+  overflow: auto;
+}
